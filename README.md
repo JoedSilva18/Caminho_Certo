@@ -10,7 +10,7 @@ Com uma das maiores frotas de caminhões do mundo o Brasil se movimenta pelas es
 
 ### A Ideia
 
-O aplicativo "Caminho Certo", nasceu com a intenção de ajudar o caminhoneiro no planejamento de suas rotas e com isso, diminuir seus custos de viagem, previnir de possiveis emprevistos e com isso tornar a viagem menos desgastante. O aplicativo planeja sua rota e te mostra os locais confiaveis para a sua parada, seja para descansar, almoçar ou apenas esticar as pernas.
+O aplicativo "Caminho Certo", nasceu com a intenção de ajudar o caminhoneiro no planejamento de suas rotas e com isso, diminuir seus custos de viagem, previnir de possiveis imprevistos e com isso tornar a viagem menos desgastante. O aplicativo planeja sua rota e te mostra os locais confiáveis para a sua parada, seja para descansar, almoçar ou apenas esticar as pernas.
 
 ### Ferramentas Utilizadas
 
@@ -18,7 +18,7 @@ O aplicativo "Caminho Certo", nasceu com a intenção de ajudar o caminhoneiro n
 Serviço que possibilita a troca de mensagens através do Whatsapp. No projeto utilizamos para fazer a troca de mensagem entre o Watson Assistant e o usuário.
 
 ### [IBM Watson Assistant:]("https://www.ibm.com/cloud/watson-assistant/")
-Serviço que auxilia na criação de assistants inteligentes. No projeto utilizamos para reconhecer a intenção do usuário, onde o mesmo faz perguntas relacionadas ao aplicativo ou a rota que ele esta fazendo.
+Serviço que auxilia na criação de assistants inteligentes. No projeto utilizamos para reconhecer a intenção do usuário, onde o mesmo faz perguntas relacionadas ao aplicativo ou a rota que ele está fazendo.
 
 O dashboard que usamos dentro do Watson Assistant  apresentado a seguir:
 <p align="center">
