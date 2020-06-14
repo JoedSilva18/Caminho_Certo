@@ -1,5 +1,6 @@
 <p align="center">
   <img src="https://i.imgur.com/TY4wKsk.png" height="260" width="320" />
+  <img src="https://conteudos.xpi.com.br/wp-content/uploads/2019/10/ccr-logo-nobo.png" height="290" width="320">
 </p>
 
 # Caminho Certo | Hackathon CCR
