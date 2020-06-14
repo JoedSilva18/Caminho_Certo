@@ -6,8 +6,6 @@ require('express-async-errors');
 
 var _routes = require('./routes'); var _routes2 = _interopRequireDefault(_routes);
 
-// Uncomment this line to enable database access
-// --------
 require('./database');
 
 class App {
