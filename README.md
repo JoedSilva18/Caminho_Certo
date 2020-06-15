@@ -12,6 +12,46 @@ Com uma das maiores frotas de caminhões do mundo o Brasil se movimenta pelas es
 
 O aplicativo "Caminho Certo", nasceu com a intenção de ajudar o caminhoneiro no planejamento de suas rotas e com isso, diminuir seus custos de viagem, previnir de possiveis imprevistos e com isso tornar a viagem menos desgastante. O aplicativo planeja sua rota e te mostra os locais confiáveis para a sua parada, seja para descansar, almoçar ou apenas esticar as pernas.
 
+### Como Funciona
+
+O aplicativo Caminho Certo é uma mão na roda para o caminhoneiro. Basta baixar o aplicativo e acessá-lo. Você precisa efetuar um login rápido com uma conta do Google e pronto. Você já pode usar nossos serviços!
+
+<p align="center">
+  <img src="https://i.imgur.com/B8MPEEw.png" height="460" width="920">
+</p>
+
+
+Feito isso, aparece um mapa e você pode escolher um ponto de destino digitando na barra de pesquisa acima do mapa. 
+
+<p align="center">
+  <img src="https://i.imgur.com/KnIDHEo.png" height="460" width="920">
+</p>
+
+A partir do momento que escolher o endereço final, clique na lupa. O aplicativo Caminho Certo traça a melhor rota da sua localização atual até o ponto desejado. Uma tela mostrando alguns dados básicos como Tempo, Distância e Número de Paradas será disparada. Se você deseja confirmar essa rota, clique em Confirmar.
+
+<p align="center">
+  <img src="https://i.imgur.com/MbMrzaF.png" height="460" width="920">
+</p>
+
+Agora com sua rota confirmada, você pode visualizar no mapa o trajeto certinho, interagindo com ele e visualizando os pontos/postos de parada que o aplicativo Caminho Certo escolheu pra você! Não se preocupe, só escolhemos pontos seguros e que vão aumentar a eficiência da sua rota. 
+
+<p align="center">
+  <img src="https://i.imgur.com/VHWMplu.png" height="460" width="920">
+</p>
+
+Se você já está pronto para partir, clique em Iniciar e o aplicativo Caminho Certo vai acompanhar sua viagem, garantindo assim amplo suporte e mais segurança!
+Além disso, a qualquer momento você pode clicar em um dos postos escolhidos para parada que estão no mapa. Ali, você encontrará dados básicos sobre quanto falta pra chegar nesse ponto, se é possível comer, ou até dormir por lá. Com a ajuda da comunidade de caminhoneiros, você pode visualizar a avaliação do posto também, pra verificar se ele é um posto de qualidade.
+
+<p align="center">
+  <img src="https://i.imgur.com/R8PllMR.png" height="460" width="920">
+</p>
+
+Mesmo assim, se você tiver qualquer dúvida, seja sobre sua rota, sobre nossos serviços, sobre postos, como usar o aplicativo ou qualquer outro tipo de questão, basta clicar no ícone de WhatsApp no canto inferior direito. Ali você será redirecionado para falar com bot Caminho Certo. Iremos te atender sempre da melhor maneira e sanar suas dúvidas! 
+
+<p align="center">
+  <img src="https://i.imgur.com/B670NXU.png" height="460" width="920">
+</p>
+
 ### Ferramentas Utilizadas
 
 ### [Twilio]("https://www.twilio.com/")
