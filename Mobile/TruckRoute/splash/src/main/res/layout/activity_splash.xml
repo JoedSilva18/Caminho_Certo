@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/motionLayoutSplash"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/activity_splash_scene">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationSplash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0"
+        android:layout_marginBottom="60dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/animation_splash"
+        app:lottie_scale="1.1" />
+
+    <TextView
+        android:id="@+id/txtWelcomeSplash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/animationSplash"
+        android:text="Bem vindo(a) Carolina"
+        android:textSize="22sp"
+        android:layout_marginBottom="50dp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/colorPrimary" />
+
+    <Button
+        android:id="@+id/btnGoogle"
+        style="@style/Widget.DesignSystem.Button.Primary"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_margin="20dp"
+        android:drawableStart="@drawable/ic_google"
+        android:drawableEnd="@drawable/ic_square"
+        android:fontFamily="@font/museosans_500"
+        android:onClick="onClickGoogle"
+        android:padding="10dp"
+        android:visibility="gone"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp"
+        android:text="@string/authentication_google_account"
+        android:textColor="@color/white_FFFFFF"
+        android:textSize="17sp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/animationSplash"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="RtlSymmetry" />
+
+    <ImageView
+        android:id="@+id/imgBigCloudSplash"
+        android:layout_width="105dp"
+        android:layout_height="105dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/ic_big_cloud"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineAnimationSplash"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgLittleCloudSplash"
+        android:layout_width="105dp"
+        android:layout_height="105dp"
+        android:layout_marginEnd="25dp"
+        android:src="@drawable/ic_little_cloud"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineAnimationSplash"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1" />
+
+    <ImageView
+        android:id="@+id/imgFlySplash"
+        android:layout_width="32dp"
+        android:layout_height="14dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/animated_bird"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgLittleCloudSplash" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineAnimationSplash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.35" />
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

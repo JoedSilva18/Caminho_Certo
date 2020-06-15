@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/action_home">
+
+<!--    <fragment-->
+<!--        android:id="@+id/action_user"-->
+<!--        android:name="com.map.views.MapFragment"-->
+<!--        android:label="PopularSeriesFragment"-->
+<!--        tools:layout="@layout/fragment_map">-->
+<!--        <action-->
+<!--            android:id="@+id/action_bottom_popular_to_detailsActivity"-->
+<!--            app:destination="@id/detailsActivity" />-->
+<!--        <argument-->
+<!--            android:name="data"-->
+<!--            app:argType="string" />-->
+<!--    </fragment>-->
+
+    <fragment
+        android:id="@+id/action_user"
+        android:name="com.user.views.UserFragment"
+        tools:layout="@layout/fragment_user">
+
+        <argument
+            android:name="data"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/action_home"
+        android:name="com.map.views.MapFragment"
+        tools:layout="@layout/fragment_map">
+
+        <argument
+            android:name="data"
+            app:argType="string" />
+    </fragment>
+</navigation>

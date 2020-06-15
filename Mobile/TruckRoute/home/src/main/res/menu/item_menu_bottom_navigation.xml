@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_user"
+        android:enabled="true"
+        android:icon="@drawable/ic_user"
+        android:title=""
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_home"
+        android:enabled="true"
+        android:icon="@color/transparent"
+        android:title=""
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_message"
+        android:enabled="true"
+        android:icon="@drawable/ic_whatsapp"
+        android:title=""
+        android:state_pressed="true"
+        android:state_enabled="true"
+        android:color="@color/green_4AC959"
+        android:checked="true"
+        android:checkable="true"
+        app:showAsAction="ifRoom" />
+</menu>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!--region TextInputLayout-->
+
+    <!--region Custom attributes-->
+    <declare-styleable name="TextInputLayout">
+        <attr name="errorIcon" format="reference"/>
+    </declare-styleable>
+    <!--endregion-->
+
+    <!--region Style-->
+    <style name="Widget.DesignSystem.TextInputLayoutOutlinedBoxStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="hintTextAppearance">@style/TextAppearance.DesignSystem.TextInputLayoutHintTextAppearance</item>
+        <item name="helperTextTextAppearance">@style/TextAppearance.DesignSystem.TextInputLayoutHelperTextAppearance</item>
+        <item name="errorTextAppearance">@style/TextAppearance.DesignSystem.TextInputLayoutErrorTextAppearance</item>
+        <item name="android:textColorHint">@color/text_input_text_hint_inactive_color</item>
+        <item name="boxCornerRadiusTopStart">@dimen/text_input_layout_box_corner_radius</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/text_input_layout_box_corner_radius</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/text_input_layout_box_corner_radius</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/text_input_layout_box_corner_radius</item>
+        <item name="boxStrokeColor">@color/text_input_text_box_stroke_active_color</item>
+        <!--Change "boxStrokeWidth" based on state: focused=1.5dp disabled=0.5dp default=1.0dp-->
+        <!--Issue: https://issuetracker.google.com/issues/117952752-->
+        <item name="boxStrokeWidth">@dimen/text_input_layout_box_stroke_width</item>
+        <item name="errorIcon">@drawable/ic_form_error</item>
+    </style>
+
+    <style name="TextAppearance.DesignSystem.TextInputLayoutHintTextAppearance" parent="TextAppearance.Design.Hint">
+        <item name="android:fontFamily">@font/sul_sans_regular</item>
+        <item name="android:textSize">@dimen/text_input_layout_label_text_size</item>
+        <item name="android:textColor">@color/text_input_text_hint_active_color</item>
+    </style>
+
+    <style name="TextAppearance.DesignSystem.TextInputLayoutHelperTextAppearance" parent="TextAppearance.Design.HelperText">
+        <item name="android:fontFamily">@font/sul_sans_light</item>
+        <item name="android:textSize">@dimen/text_input_layout_helper_text_size</item>
+        <item name="android:textColor">@color/text_input_text_helper_color</item>
+    </style>
+
+    <style name="TextAppearance.DesignSystem.TextInputLayoutErrorTextAppearance" parent="TextAppearance.Design.Error">
+        <item name="android:fontFamily">@font/sul_sans_regular</item>
+        <item name="android:textSize">@dimen/text_input_layout_error_text_size</item>
+        <item name="android:textColor">@color/orange_EF5753</item>
+    </style>
+    <!--endregion-->
+
+    <!--region Dimen-->
+    <dimen name="text_input_layout_box_stroke_width">1dp</dimen>
+    <dimen name="text_input_layout_box_corner_radius">4dp</dimen>
+    <dimen name="text_input_layout_helper_text_size">12sp</dimen>
+    <dimen name="text_input_layout_error_text_size">12sp</dimen>
+    <dimen name="text_input_layout_label_text_size">12sp</dimen>
+    <dimen name="mtrl_textinput_box_stroke_width_default" tools:override="true">1dp</dimen>
+    <dimen name="mtrl_textinput_box_stroke_width_focused" tools:override="true">1.5dp</dimen>
+    <!--endregion-->
+
+    <!--region color-->
+    <color name="text_input_text_hint_active_color">@color/black_000</color>
+    <color name="text_input_text_hint_inactive_color">@color/grey_A6A6A6</color>
+    <color name="text_input_text_helper_color">@color/grey_A6A6A6</color>
+    <color name="text_input_text_box_stroke_active_color">@color/grey_525151</color>
+    <color name="text_input_text_box_stroke_inactive_color">@color/grey_DCDCDC</color>
+    <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">@color/text_input_text_box_stroke_inactive_color</color>
+    <!--endregion-->
+
+    <!--region TextInputEditText-->
+
+    <!--region Style-->
+    <style name="Widget.DesignSystem.TextInputEditTextOutlinedBoxStyle" parent="Widget.MaterialComponents.TextInputEditText.OutlinedBox">
+        <item name="hintTextAppearance">@style/TextAppearance.DesignSystem.TextInputEditTextHintTextAppearance</item>
+        <item name="android:fontFamily">@font/sul_sans_regular</item>
+        <item name="android:textSize">@dimen/text_input_edit_text_text_size</item>
+        <item name="android:textColor">@color/text_input_edit_hint_active_color</item>
+        <item name="android:paddingTop">@dimen/text_input_edit_text_padding_vertical</item>
+        <item name="android:paddingBottom">@dimen/text_input_edit_text_padding_vertical</item>
+    </style>
+
+    <style name="TextAppearance.DesignSystem.TextInputEditTextHintTextAppearance" parent="TextAppearance.Design.Hint">
+        <item name="android:fontFamily">@font/sul_sans_regular</item>
+        <item name="android:textSize">@dimen/text_input_edit_text_text_size</item>
+        <item name="android:textColor">@color/text_input_edit_hint_inactive_color</item>
+    </style>
+    <!--endregion-->
+
+    <!--region Dimen-->
+    <dimen name="text_input_edit_text_text_size">16sp</dimen>
+    <dimen name="text_input_edit_text_padding_vertical">17sp</dimen>
+    <dimen name="text_input_layout_error_text_drawable_padding">4dp</dimen>
+    <dimen name="text_input_layout_error_text_padding_top">5dp</dimen>
+    <dimen name="text_input_layout_helper_text_padding_top">5dp</dimen>
+    <!--endregion-->
+
+    <!--region Color-->
+    <color name="text_input_edit_hint_active_color">@color/black_000</color>
+    <color name="text_input_edit_hint_inactive_color">@color/grey_DCDCDC</color>
+    <!--endregion-->
+
+    <!--endregion-->
+
+</resources>

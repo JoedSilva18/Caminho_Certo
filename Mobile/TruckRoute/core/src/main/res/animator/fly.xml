@@ -1,0 +1,9 @@
+<objectAnimator xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="500"
+    android:interpolator="@android:anim/accelerate_interpolator"
+    android:propertyName="pathData"
+    android:repeatCount="infinite"
+    android:repeatMode="reverse"
+    android:valueFrom="M2,4c3,-1 6,-1.5 7,2c1,-3.5 4,-3 7,-2"
+    android:valueTo="M4,7c3,-1 4,-4.5 5,-1c1,-3.5 2,0 5,1"
+    android:valueType="pathType" />

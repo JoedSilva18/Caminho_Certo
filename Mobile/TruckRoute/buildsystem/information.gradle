@@ -1,0 +1,4 @@
+ext {
+    APPLICATION_ID= 'com.truckroute'
+    APPLICATION_ID_DEV = 'com.truckroute'
+}

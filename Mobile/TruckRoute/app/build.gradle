@@ -1,0 +1,132 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+apply from: '../buildsystem/information.gradle'
+
+def keystorePropertiesFile = rootProject.file("keystore.properties")
+def keystoreProperties = new Properties()
+keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+
+android {
+    compileSdkVersion app.compileSdkVersion
+
+    defaultConfig {
+        applicationId APPLICATION_ID
+
+        minSdkVersion app.minSdkVersion
+        targetSdkVersion app.targetSdkVersion
+
+        versionCode app.versionCode
+        versionName app.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    signingConfigs {
+        prod {
+//            keyAlias keystoreProperties['prodKeyAlias']
+//            keyPassword keystoreProperties['prodKeyPassword']
+//            storeFile file(keystoreProperties['prodStoreFile'])
+//            storePassword keystoreProperties['prodStorePassword']
+        }
+
+        dev {
+            keyAlias keystoreProperties['devKeyAlias']
+            keyPassword keystoreProperties['devKeyPassword']
+            storeFile file(keystoreProperties['devStoreFile'])
+            storePassword keystoreProperties['devStorePassword']
+        }
+    }
+
+    buildTypes {
+
+        debug {
+            applicationIdSuffix = ".debug"
+            versionNameSuffix "-debug"
+            debuggable true
+            signingConfig signingConfigs.dev
+        }
+
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.prod
+        }
+
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    flavorDimensions dimensions.env
+    productFlavors {
+        prod {
+            applicationId APPLICATION_ID
+            dimension dimensions.env
+        }
+
+        dev {
+            applicationId APPLICATION_ID_DEV
+            dimension dimensions.env
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+//    implementation project(':data')
+//    implementation project(':domain')
+    implementation project(':core')
+    implementation project(':splash')
+    implementation project(':home')
+    implementation project(':map')
+
+    implementation generalDeps.multidex
+    implementation generalDeps.kotlinJdk
+    implementation generalDeps.koin
+    implementation generalDeps.timber
+
+    implementation generalDeps.appcompat
+    implementation generalDeps.core
+    implementation generalDeps.viewModel
+
+    implementation generalDeps.koinAc
+    implementation generalDeps.reflect
+
+    implementation generalDeps.jwt
+    implementation generalDeps.retrofit
+    implementation generalDeps.gsonConverter
+    implementation generalDeps.retrofitMoshiConverter
+
+    implementation generalDeps.glide
+    kapt generalDeps.glideCompiler
+
+    implementation generalDeps.coroutinesCore
+    implementation generalDeps.coroutinesAndroid
+    implementation generalDeps.coroutinesAdapter
+
+    implementation generalDeps.moshi
+
+    testImplementation testDeps.junit
+    androidTestImplementation androidTestDeps.junitrunner
+    androidTestImplementation androidTestDeps.espresso
+
+    // Logging:
+    api generalDeps.stetho
+    implementation generalDeps.stethoOkhttp3
+    implementation generalDeps.okhttp3LoggingInterceptor
+
+    testImplementation testDeps.assertj
+    testImplementation generalDeps.json
+}

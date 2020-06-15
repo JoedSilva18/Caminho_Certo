@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="android:statusBarColor">@color/white_FFFFFF</item>
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowContentTransitions">true</item>
+    </style>
+
+    <style name="ToolbarColoredBackArrow" parent="AppTheme">
+        <item name="android:textColorSecondary">@color/grey_525151</item>
+    </style>
+
+    <style name="ActionBarTextAppearance" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:fontFamily">@font/museosans_500</item>
+        <item name="android:textSize">19sp</item>
+    </style>
+
+
+    <!-- Button -->
+    <style name="Widget.DesignSystem.Button" parent="@android:style/TextAppearance">
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="android:textAppearance">@style/TextAppearance.DesignSystem.Button.B1</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="Widget.DesignSystem.Button.Primary" parent="Widget.DesignSystem.Button">
+        <item name="android:background">@drawable/selector_button_primary</item>
+    </style>
+
+    <style name="Widget.DesignSystem.Button.Secondary" parent="Widget.DesignSystem.Button">
+        <item name="android:background">@drawable/selector_button_secondary</item>
+    </style>
+
+    <style name="TextAppearance.DesignSystem" parent="android:TextAppearance" />
+
+    <style name="TextAppearance.DesignSystem.Button" parent="TextAppearance.DesignSystem" />
+
+    <style name="TextAppearance.DesignSystem.Button.B1" parent="TextAppearance.DesignSystem.Button">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/sul_sans_medium</item>
+    </style>
+
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/grey_525151</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+    </style>
+</resources>

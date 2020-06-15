@@ -1,0 +1,7 @@
+include ':user'
+include ':map'
+include ':home'
+include ':splash'
+include ':core'
+include ':app'
+rootProject.name = "TruckRoute"

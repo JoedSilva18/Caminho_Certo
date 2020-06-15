@@ -1,0 +1,112 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+apply from: '../buildsystem/information.gradle'
+
+android {
+    compileSdkVersion app.compileSdkVersion
+
+    defaultConfig {
+
+        minSdkVersion app.minSdkVersion
+        targetSdkVersion app.targetSdkVersion
+
+        versionCode app.versionCode
+        versionName app.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    buildTypes {
+
+        debug {
+            versionNameSuffix "-debug"
+            debuggable true
+        }
+
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    flavorDimensions dimensions.env
+    productFlavors {
+        prod {
+            dimension dimensions.env
+        }
+
+        dev {
+            dimension dimensions.env
+        }
+    }
+
+    androidExtensions {
+        experimental = true
+    }
+}
+
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation project(':core')
+
+    implementation generalDeps.kotlinJdk
+    implementation generalDeps.koin
+    implementation generalDeps.timber
+
+    implementation generalDeps.viewModel
+    implementation generalDeps.appcompat
+    implementation generalDeps.core
+    implementation generalDeps.materialDesign
+    implementation generalDeps.constraintlayout
+    implementation generalDeps.koinAc
+    implementation generalDeps.reflect
+    implementation generalDeps.lottieFiles
+    implementation generalDeps.circleImage
+    implementation generalDeps.navigationFragment
+    implementation generalDeps.navigationUi
+    implementation generalDeps.maps
+    implementation generalDeps.mapsUtils
+    implementation generalDeps.playServicesLocation
+    implementation generalDeps.googleDirection
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation 'com.google.maps:google-maps-services:0.2.8'
+    implementation 'org.slf4j:slf4j-simple:1.7.25'
+
+    implementation generalDeps.retrofit
+    implementation generalDeps.retrofitMoshiConverter
+
+    implementation generalDeps.stethoOkhttp3
+    implementation generalDeps.okhttp3LoggingInterceptor
+    implementation generalDeps.gsonConverter
+
+    implementation generalDeps.jwt
+    implementation generalDeps.coroutinesCore
+    implementation generalDeps.coroutinesAndroid
+
+    testImplementation testDeps.junit
+    testImplementation testDeps.mockK
+    testImplementation testDeps.coroutinesTest
+    testImplementation testDeps.lifecycleTest
+    androidTestImplementation androidTestDeps.junitrunner
+    androidTestImplementation androidTestDeps.espresso
+
+    implementation generalDeps.supportAnnotations
+
+}

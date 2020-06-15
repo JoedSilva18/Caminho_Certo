@@ -1,0 +1,14 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:viewportWidth="18"
+    android:viewportHeight="9"
+    android:width="36dp"
+    android:height="18dp">
+    <path
+        android:name="bird"
+        android:pathData="M2,4c3,-1 6,-1.5 7,2c1,-3.5 4,-3 7,-2"
+        android:strokeLineJoin="round"
+        android:strokeWidth="2"
+        android:strokeColor="#20416b"
+        android:strokeMiterLimit="1.41421"
+        android:strokeLineCap="round" />
+</vector>

@@ -1,0 +1,209 @@
+// This file contains all project dependencies
+
+// Gradle:
+def gradle_version = '4.0.0'
+
+// Kotlin:
+def kotlin_version = '1.3.72'
+
+// Coroutines
+def coroutines_version = '1.1.1'
+def coroutines_adapter_version = '0.9.2'
+
+// Moshi
+def moshi_version = '1.8.0'
+
+// Koin:
+def koin_version = '0.9.3'
+
+// Android Support:
+def support_version = '1.1.0'
+def material_design_version = '1.0.0'
+def core_version = '1.3.0'
+def constraint_version = '2.0.0-beta3'
+def multidex_version = '1.0.3'
+
+// Arch Components:
+def arch_components_version = "2.1.0"
+
+// DB:
+def debug_db_version = '1.0.6'
+
+// JUnit:
+def junit_version = '4.12'
+def junit_runner_version = '1.2.0'
+def assertj_version = '3.10.0'
+
+// Expresso:
+def espresso_version = '3.2.0'
+
+// Networking:
+def jwt_version = '0.9.1'
+def retrofit_version = '2.6.0'
+def okhttp3logginginterceptor_version = '3.10.0'
+def gson_version = '2.8.5'
+def gson_converter_version = '2.5.0'
+
+// Stetho
+def stetho_version = '1.5.0'
+
+// Timber
+def timber_version = '4.7.1'
+
+// JSON
+def json_version = '20180130'
+
+// Glide
+def glide_version = '4.10.0'
+
+// LottieFiles
+def lottie_version = '3.3.1'
+
+// MockK
+def mockK_version = '1.9.3'
+
+// UCrop
+def ucrop_version = '2.2.4'
+
+// CircleImage
+def circle_image_version = '3.0.1'
+
+// Navigation
+def nav_version = "2.2.2"
+
+// Maps
+def maps_version = "17.0.0"
+def maps_utils_version = "1.3.3"
+def play_services_location_version = "17.0.0"
+def google_direction_version = "1.2.0"
+
+// implementation / api ====
+
+ext.app = [
+        minSdkVersion    : 23,
+        targetSdkVersion : 29,
+        compileSdkVersion: 29,
+        versionCode: 1,
+        versionName: "1.0"
+]
+
+ext.dimensions = [
+        env    : "env"
+]
+
+ext.generalDeps = [
+        // Kotlin:
+        kotlinJdk                : "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version",
+        coroutinesCore           : "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version",
+        coroutinesAndroid        : "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version",
+        coroutinesAdapter        : "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:$coroutines_adapter_version",
+
+        // Moshi:
+        moshi                    : "com.squareup.moshi:moshi-kotlin:$moshi_version",
+
+        // Koin:
+        koin                     : "org.koin:koin-android:$koin_version",
+        koinCore                 : "org.koin:koin-core:$koin_version",
+        koinAc                   : "org.koin:koin-android-architecture:$koin_version",
+        reflect                  : "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version",
+
+        // DB (IMPORTANT: Use debugImplementation to avoid security problems):
+        debugDb                  : "com.amitshekhar.android:debug-db:$debug_db_version",
+
+        // Arch Comps:
+        lifecycle                : "androidx.lifecycle:lifecycle-runtime-ktx:$arch_components_version",
+        viewModel                : "androidx.lifecycle:lifecycle-viewmodel-ktx:$arch_components_version",
+        livedata                 : "androidx.lifecycle:lifecycle-livedata-ktx:$arch_components_version",
+        archComponents           : "androidx.arch.core:core-runtime:$arch_components_version",
+
+        // Android Support:
+        supportAnnotations       : "com.android.support:support-annotations:$support_version",
+        multidex                 : "com.android.support:multidex:$multidex_version",
+
+        // Android Support Views:
+        appcompat                : "androidx.appcompat:appcompat:$support_version",
+        core                     : "androidx.core:core-ktx:$core_version",
+        cardview                 : "com.android.support:cardview-v7:$support_version",
+        recyclerview             : "androidx.recyclerview:recyclerview:$support_version",
+        materialDesign           : "com.google.android.material:material:$material_design_version",
+        constraintlayout         : "androidx.constraintlayout:constraintlayout:$constraint_version",
+
+        // Glide
+        glide                    : "com.github.bumptech.glide:glide:$glide_version",
+        glideCompiler            : "com.github.bumptech.glide:compiler:$glide_version",
+
+        // JWT:
+        jwt                      : "io.jsonwebtoken:jjwt:$jwt_version",
+
+        // Retrofit:
+        retrofit                 : "com.squareup.retrofit2:retrofit:$retrofit_version",
+        retrofitRxAdapter        : "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version",
+        retrofitMoshiConverter   : "com.squareup.retrofit2:converter-moshi:$retrofit_version",
+        gsonConverter            : "com.squareup.retrofit2:converter-gson:$gson_converter_version",
+
+        okhttp3LoggingInterceptor: "com.squareup.okhttp3:logging-interceptor:$okhttp3logginginterceptor_version",
+        gson                     : "com.google.code.gson:gson:$gson_version",
+
+        // JSON:
+        json                     : "org.json:json:$json_version",
+
+        // Stetho (Logging):
+        stetho                   : "com.facebook.stetho:stetho:$stetho_version",
+        stethoOkhttp3            : "com.facebook.stetho:stetho-okhttp3:$stetho_version",
+
+        // Timber (Logging):
+        timber                   : "com.jakewharton.timber:timber:$timber_version",
+
+        // LottieFiles
+        lottieFiles              : "com.airbnb.android:lottie:$lottie_version",
+
+        // CicleImage
+        circleImage              : "de.hdodenhof:circleimageview:$circle_image_version",
+
+        navigationFragment       : "android.arch.navigation:navigation-fragment-ktx:$nav_version",
+        navigationUi             : "android.arch.navigation:navigation-ui-ktx:$nav_version",
+
+        maps                     : "com.google.android.gms:play-services-maps:$maps_version",
+
+        mapsUtils                : "com.google.maps.android:android-maps-utils:$maps_utils_version",
+
+        playServicesLocation     : "com.google.android.gms:play-services-location:$play_services_location_version",
+
+        googleDirection          : "com.akexorcist:google-direction-library:$google_direction_version",
+
+]
+
+// testImplementation / testApi ====
+ext.testDeps = [
+        // JUnit:
+        junit                    : "junit:junit:$junit_version",
+        assertj                  : "org.assertj:assertj-core:$assertj_version",
+
+        // MockK
+        mockK                    : "io.mockk:mockk:$mockK_version",
+
+        // Coroutines Test
+        coroutinesTest           : "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutines_version",
+
+        // Lifecycle Test
+        lifecycleTest            : "androidx.arch.core:core-testing:$arch_components_version",
+]
+
+// androidTestImplementation / androidTestApi ====
+ext.androidTestDeps = [
+        // JUnit
+        junitrunner: "androidx.test:runner:$junit_runner_version",
+
+        // Espresso:
+        espresso   : "androidx.test.espresso:espresso-core:$espresso_version",
+]
+
+// Gradle dependencies
+ext.gradleDeps = [
+        // Android
+        android         : "com.android.tools.build:gradle:$gradle_version",
+
+        // Kotlin
+        kotlin          : "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version",
+        kotlinExtension : "org.jetbrains.kotlin:kotlin-android-extensions:$kotlin_version"
+]
