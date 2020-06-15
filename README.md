@@ -17,7 +17,7 @@ O aplicativo "Caminho Certo", nasceu com a intenção de ajudar o caminhoneiro n
 O aplicativo Caminho Certo é uma mão na roda para o caminhoneiro. Basta baixar o aplicativo e acessá-lo. Você precisa efetuar um login rápido com uma conta do Google e pronto. Você já pode usar nossos serviços!
 
 <p align="center">
-  <img src="https://i.imgur.com/B8MPEEw.png" height="460" width="920">
+  <img src="https://i.imgur.com/B8MPEEw.png" height="400" width="200">
 </p>
 
 
